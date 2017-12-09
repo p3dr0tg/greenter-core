@@ -9,6 +9,8 @@
 namespace Greenter\Model\Sale;
 
 /**
+ * Note v2.1
+ *
  * Class Note
  * @package Greenter\Model\Sale
  */

@@ -9,16 +9,23 @@
 namespace Greenter\Model\Sale;
 
 /**
+ * Invoice v2.1
+ *
  * Class Invoice
  * @package Greenter\Model\Sale
  */
 class Invoice extends BaseSale
 {
     /**
-     * Tipo operacion (Catálogo 17).
+     * Tipo operacion (Catálogo 51).
      * @var string
      */
     private $tipoOperacion;
+
+    /**
+     * @var \DateTime
+     */
+    private $fecVencimiento;
 
     /**
      * @var float
@@ -101,6 +108,24 @@ class Invoice extends BaseSale
     public function setTipoOperacion($tipoOperacion)
     {
         $this->tipoOperacion = $tipoOperacion;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getFecVencimiento()
+    {
+        return $this->fecVencimiento;
+    }
+
+    /**
+     * @param \DateTime $fecVencimiento
+     * @return Invoice
+     */
+    public function setFecVencimiento($fecVencimiento)
+    {
+        $this->fecVencimiento = $fecVencimiento;
         return $this;
     }
 

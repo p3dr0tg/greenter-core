@@ -12,6 +12,8 @@ use Greenter\Model\Company\Company;
 use Greenter\Model\DocumentInterface;
 
 /**
+ * Summary v2.1
+ *
  * Class Summary
  * @package Greenter\Model\Summary
  */

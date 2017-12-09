@@ -12,6 +12,8 @@ use Greenter\Model\Company\Company;
 use Greenter\Model\DocumentInterface;
 
 /**
+ * Sale 2.1
+ *
  * Class BaseSale
  * @package Greenter\Model\Sale
  */
@@ -40,7 +42,7 @@ class BaseSale implements DocumentInterface
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Date()
+     * @Assert\DateTime()
      * @var \DateTime
      */
     protected $fechaEmision;
