@@ -36,6 +36,13 @@ class SaleDetail
     private $codProducto;
 
     /**
+     * Codigo de Producto - SUNAT.
+     *
+     * @var string
+     */
+    private $codProdSunat;
+
+    /**
      * Descripcion del Producto.
      *
      * @Assert\NotBlank()
@@ -157,6 +164,24 @@ class SaleDetail
     public function setCodProducto($codProducto)
     {
         $this->codProducto = $codProducto;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCodProdSunat()
+    {
+        return $this->codProdSunat;
+    }
+
+    /**
+     * @param string $codProdSunat
+     * @return SaleDetail
+     */
+    public function setCodProdSunat($codProdSunat)
+    {
+        $this->codProdSunat = $codProdSunat;
         return $this;
     }
 
