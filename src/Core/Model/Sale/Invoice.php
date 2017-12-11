@@ -62,15 +62,6 @@ class Invoice extends BaseSale
     private $compra;
 
     /**
-     * Guias de Remision relacionado (caso de uso en venta itinerante).
-     *
-     * @Assert\Valid()
-     *
-     * @var Document[]
-     */
-    private $guias;
-
-    /**
      * @Assert\Valid()
      *
      * @var Prepayment[]
@@ -234,24 +225,6 @@ class Invoice extends BaseSale
     public function setCompra($compra)
     {
         $this->compra = $compra;
-        return $this;
-    }
-
-    /**
-     * @return Document[]
-     */
-    public function getGuias()
-    {
-        return $this->guias;
-    }
-
-    /**
-     * @param Document[] $guias
-     * @return Invoice
-     */
-    public function setGuias($guias)
-    {
-        $this->guias = $guias;
         return $this;
     }
 
