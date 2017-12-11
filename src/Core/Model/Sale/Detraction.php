@@ -16,6 +16,13 @@ namespace Greenter\Model\Sale;
 class Detraction
 {
     /**
+     * Catalogo 54.
+     *
+     * @var string
+     */
+    private $code;
+
+    /**
      * Porcentaje de la detracción
      *
      * @Assert\NotBlank()
@@ -33,10 +40,22 @@ class Detraction
     private $mount;
 
     /**
-     * Valor referencial, en el caso de detracciones al transporte de bienes por vía terrestre
-     * @var float
+     * @return string
      */
-    private $valueRef;
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     * @return Detraction
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+        return $this;
+    }
 
     /**
      * @return float
@@ -71,24 +90,6 @@ class Detraction
     public function setMount($mount)
     {
         $this->mount = $mount;
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getValueRef()
-    {
-        return $this->valueRef;
-    }
-
-    /**
-     * @param float $valueRef
-     * @return Detraction
-     */
-    public function setValueRef($valueRef)
-    {
-        $this->valueRef = $valueRef;
         return $this;
     }
 }

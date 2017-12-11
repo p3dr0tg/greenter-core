@@ -36,30 +36,26 @@ class EmbededDespatch
     private $transportista;
 
     /**
-     * N° de licencia de conducir
-     *
-     * @Assert\Length(max="30")
-     * @var string
-     */
-    private $nroLicencia;
-
-    /**
      * @Assert\Length(max="10")
      * @var string
      */
     private $transpPlaca;
 
     /**
-     * @Assert\Length(max="50")
-     * @var string
+     * @var \DateTime
      */
-    private $transpCodeAuth;
+    private $fecTraslado;
 
     /**
-     * @Assert\Length(max="50")
+     * @Assert\Length(max="40")
      * @var string
      */
-    private $transpMarca;
+    private $nroConstanciaVehiculo;
+
+    /**
+     * @var Client[]
+     */
+    private $conductores;
 
     /**
      * @Assert\Length(min="2", max="2")
@@ -136,24 +132,6 @@ class EmbededDespatch
     /**
      * @return string
      */
-    public function getNroLicencia()
-    {
-        return $this->nroLicencia;
-    }
-
-    /**
-     * @param string $nroLicencia
-     * @return EmbededDespatch
-     */
-    public function setNroLicencia($nroLicencia)
-    {
-        $this->nroLicencia = $nroLicencia;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
     public function getTranspPlaca()
     {
         return $this->transpPlaca;
@@ -170,38 +148,56 @@ class EmbededDespatch
     }
 
     /**
-     * @return string
+     * @return \DateTime
      */
-    public function getTranspCodeAuth()
+    public function getFecTraslado()
     {
-        return $this->transpCodeAuth;
+        return $this->fecTraslado;
     }
 
     /**
-     * @param string $transpCodeAuth
+     * @param \DateTime $fecTraslado
      * @return EmbededDespatch
      */
-    public function setTranspCodeAuth($transpCodeAuth)
+    public function setFecTraslado($fecTraslado)
     {
-        $this->transpCodeAuth = $transpCodeAuth;
+        $this->fecTraslado = $fecTraslado;
+        return $this;
+    }
+
+    /**
+     * @return Client[]
+     */
+    public function getConductores()
+    {
+        return $this->conductores;
+    }
+
+    /**
+     * @param Client[] $conductores
+     * @return EmbededDespatch
+     */
+    public function setConductores($conductores)
+    {
+        $this->conductores = $conductores;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getTranspMarca()
+    public function getNroConstanciaVehiculo()
     {
-        return $this->transpMarca;
+        return $this->nroConstanciaVehiculo;
     }
 
     /**
-     * @param string $transpMarca
+     * @param string $nroConstanciaVehiculo
      * @return EmbededDespatch
      */
-    public function setTranspMarca($transpMarca)
+    public function setNroConstanciaVehiculo($nroConstanciaVehiculo)
     {
-        $this->transpMarca = $transpMarca;
+        $this->nroConstanciaVehiculo = $nroConstanciaVehiculo;
         return $this;
     }
 
