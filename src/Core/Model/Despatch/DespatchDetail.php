@@ -42,6 +42,13 @@ class DespatchDetail
     private $cantidad;
 
     /**
+     * Codigo de Producto - SUNAT.
+     *
+     * @var string
+     */
+    private $codProdSunat;
+
+    /**
      * @return string
      */
     public function getCodigo()
@@ -110,6 +117,24 @@ class DespatchDetail
     public function setCantidad($cantidad)
     {
         $this->cantidad = $cantidad;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCodProdSunat()
+    {
+        return $this->codProdSunat;
+    }
+
+    /**
+     * @param string $codProdSunat
+     * @return DespatchDetail
+     */
+    public function setCodProdSunat($codProdSunat)
+    {
+        $this->codProdSunat = $codProdSunat;
         return $this;
     }
 }
