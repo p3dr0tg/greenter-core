@@ -64,6 +64,11 @@ class EmbededDespatch
     private $modTraslado;
 
     /**
+     * @var string
+     */
+    private $codTraslado;
+
+    /**
      * @Assert\Type("numeric")
      * @var float
      */
@@ -216,6 +221,25 @@ class EmbededDespatch
     public function setModTraslado($modTraslado)
     {
         $this->modTraslado = $modTraslado;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCodTraslado()
+    {
+        return $this->codTraslado;
+    }
+
+    /**
+     * Set Codigo de Motivo de Traslado.
+     * @param string $codTraslado
+     * @return EmbededDespatch
+     */
+    public function setCodTraslado($codTraslado)
+    {
+        $this->codTraslado = $codTraslado;
         return $this;
     }
 
