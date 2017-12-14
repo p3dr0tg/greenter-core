@@ -68,6 +68,11 @@ class SaleDetail
     private $mtoDsctoItem;
 
     /**
+     * @var Charge
+     */
+    private $otroCargo;
+
+    /**
      * @Assert\NotBlank()
      * @var float
      */
@@ -112,6 +117,11 @@ class SaleDetail
      * @var float
      */
     private $mtoValorGratuito;
+
+    /**
+     * @var ItemAttribute[]
+     */
+    private $attributos;
 
     /**
      * @return string
@@ -362,6 +372,42 @@ class SaleDetail
     public function setMtoValorGratuito($mtoValorGratuito)
     {
         $this->mtoValorGratuito = $mtoValorGratuito;
+        return $this;
+    }
+
+    /**
+     * @return Charge
+     */
+    public function getOtroCargo()
+    {
+        return $this->otroCargo;
+    }
+
+    /**
+     * @param Charge $otroCargo
+     * @return SaleDetail
+     */
+    public function setOtroCargo($otroCargo)
+    {
+        $this->otroCargo = $otroCargo;
+        return $this;
+    }
+
+    /**
+     * @return ItemAttribute[]
+     */
+    public function getAttributos()
+    {
+        return $this->attributos;
+    }
+
+    /**
+     * @param ItemAttribute[] $attributos
+     * @return SaleDetail
+     */
+    public function setAttributos($attributos)
+    {
+        $this->attributos = $attributos;
         return $this;
     }
 }
