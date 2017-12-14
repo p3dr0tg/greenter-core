@@ -68,7 +68,7 @@ class Despatch implements DocumentInterface
     private $destinatario;
 
     /**
-     * Datos del Establecimiento del tercero (cuando se ingrese)
+     * Datos del Proveedor. (cuando se ingrese)
      *
      * @Assert\Valid()
      * @var Client
