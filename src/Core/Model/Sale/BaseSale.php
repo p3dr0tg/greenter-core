@@ -133,11 +133,9 @@ class BaseSale implements DocumentInterface
     /**
      * Guias de Remision relacionado (caso de uso en venta itinerante).
      *
-     * @Assert\Valid()
-     *
      * @var Document[]
      */
-    private $guias;
+    protected $guias;
 
     /**
      * @Assert\Valid()

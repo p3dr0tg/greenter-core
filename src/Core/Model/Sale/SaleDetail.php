@@ -121,7 +121,7 @@ class SaleDetail
     /**
      * @var ItemAttribute[]
      */
-    private $attributos;
+    private $atributos;
 
     /**
      * @return string
@@ -396,18 +396,18 @@ class SaleDetail
     /**
      * @return ItemAttribute[]
      */
-    public function getAttributos()
+    public function getAtributos()
     {
-        return $this->attributos;
+        return $this->atributos;
     }
 
     /**
-     * @param ItemAttribute[] $attributos
+     * @param ItemAttribute[] $atributos
      * @return SaleDetail
      */
-    public function setAttributos($attributos)
+    public function setAtributos($atributos)
     {
-        $this->attributos = $attributos;
+        $this->atributos = $atributos;
         return $this;
     }
 }
