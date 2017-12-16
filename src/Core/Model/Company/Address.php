@@ -58,14 +58,6 @@ class Address
     private $direccion;
 
     /**
-     * Address constructor.
-     */
-    public function __construct()
-    {
-        $this->codigoPais = 'PE';
-    }
-
-    /**
      * @return string
      */
     public function getUbigueo()
