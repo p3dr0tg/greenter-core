@@ -8,7 +8,9 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
 
 install:
+  - composer require vimeo/psalm
   - composer require jakub-onderka/php-parallel-lint
 
 script:
   - vendor/bin/parallel-lint --exclude vendor .
+  - vendor/bin/psalm

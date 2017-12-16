@@ -54,11 +54,6 @@ class Voided implements DocumentInterface
      */
     protected $details;
 
-    public function __construct()
-    {
-        $this->fecGeneracion = new \DateTime();
-    }
-
     /**
      * @return string
      */

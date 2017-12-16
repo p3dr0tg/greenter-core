@@ -20,7 +20,7 @@ class BaseResult
     protected $success;
 
     /**
-     * @var Error
+     * @var Error|null
      */
     protected $error;
 
@@ -30,6 +30,7 @@ class BaseResult
     public function __construct()
     {
         $this->success = false;
+        $this->error = null;
     }
 
 
@@ -52,7 +53,7 @@ class BaseResult
     }
 
     /**
-     * @return Error
+     * @return Error|null
      */
     public function getError()
     {
