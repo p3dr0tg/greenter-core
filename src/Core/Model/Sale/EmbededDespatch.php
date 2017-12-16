@@ -42,6 +42,17 @@ class EmbededDespatch
     private $transpPlaca;
 
     /**
+     * @Assert\Length(max="50")
+     * @var string
+     */
+    private $transpCodeAuth;
+    /**
+     * @Assert\Length(max="50")
+     * @var string
+     */
+    private $transpMarca;
+
+    /**
      * @var \DateTime
      */
     private $fecTraslado;
@@ -149,6 +160,39 @@ class EmbededDespatch
     public function setTranspPlaca($transpPlaca)
     {
         $this->transpPlaca = $transpPlaca;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTranspCodeAuth()
+    {
+        return $this->transpCodeAuth;
+    }
+    /**
+     * @param string $transpCodeAuth
+     * @return EmbededDespatch
+     */
+    public function setTranspCodeAuth($transpCodeAuth)
+    {
+        $this->transpCodeAuth = $transpCodeAuth;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getTranspMarca()
+    {
+        return $this->transpMarca;
+    }
+    /**
+     * @param string $transpMarca
+     * @return EmbededDespatch
+     */
+    public function setTranspMarca($transpMarca)
+    {
+        $this->transpMarca = $transpMarca;
         return $this;
     }
 
