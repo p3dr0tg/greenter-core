@@ -36,6 +36,11 @@ class EmbededDespatch
     private $transportista;
 
     /**
+     * @var string
+     */
+    private $nroLicencia;
+
+    /**
      * @Assert\Length(max="10")
      * @var string
      */
@@ -142,6 +147,24 @@ class EmbededDespatch
     public function setTransportista($transportista)
     {
         $this->transportista = $transportista;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNroLicencia()
+    {
+        return $this->nroLicencia;
+    }
+
+    /**
+     * @param string $nroLicencia
+     * @return EmbededDespatch
+     */
+    public function setNroLicencia($nroLicencia)
+    {
+        $this->nroLicencia = $nroLicencia;
         return $this;
     }
 
